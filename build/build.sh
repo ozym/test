@@ -12,6 +12,9 @@ trap error_handler ERR
 go get github.com/GeoNet/delta/meta
 go get gopkg.in/yaml.v2
 
+git checkout -b build
+git remote add upstream git@github.com:ozym/test.git
+
 mkdir -p files/ntripcaster
 go build ./code/cmd/ntripcaster-config || exit 255
 
@@ -20,7 +23,7 @@ go build ./code/cmd/ntripcaster-config || exit 255
 git add files/ntripcaster/test.yaml
 git commit -m 'auto update [skip travis]'
 git remote -v 
-git push origin master
+git push upstream build:master
 
 exit $errcount
 
