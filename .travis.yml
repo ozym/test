@@ -23,4 +23,8 @@ script:
 after_script:
   - ls -lR files
 
+env:
+  matrix:
+    secure: bYcC761p4A1amHOMUBK9g/HLG1CGCq9QEkGWFMnGliOAewoeDAgYJffyGzr7Wm6sMyfQAfsuSd/DJVJpSzt+uAMmaD5UTgMIXQp52ED6SkMNj/3sjlx0IGQCX+fQAfeoRIWODk2KathcHztECQw4bZzYXIlSxWM7iKTb5WJ++KK8Oiw+aMIJ/2S7oZHHFsanjJzcO65JEimZTIlZAUm/bE9Dx3VPBG1LgW4KXJ+yAOcznO0Ow7IQVN5EwzRAEG6QdJvooqcDtkqIAqStJTycHr+YnITHXlnnn8/4Hdr+gkBrCO+OzH8MW7SFnD96yU+WhT+gI7DJdbxaBpWTq81HsKWQMX3UQM8IsC9e6aBAV+MPeFAoS/+zuq2ObHjs67+vKUwE/Cg4Sa0GSxcmLOkwmCB5tHGNsrPtBFBQheEmqGHrr9RADD+XdmaYg0g0QL2MJxP5Pu5RUozBjYV5LHXJcXXfcmnPq5PrdlD1HMVVyejDwE3bCwJwjX4MnpgjhEsMX27+fFOHrtg2tS06wov0kw6TrOZzs/aphcbufU3WY896pqlWVUfjhNoP+iWeP6HsCRC26lvMrPm/3nFgRz14DwWT1UV5U9LE0oyZTAfwXjPjS5FnySqsCj6bFz6aelUokaa7awumz6xiUfCA5qSz3pVSp1nWY2VdSpD6Br5Bnnw=
+
 # vim: set ts=2 sw=2 tw=0 et:
