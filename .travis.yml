@@ -1,0 +1,24 @@
+sudo: required
+
+services:
+  - docker
+
+language: go
+
+go:
+  - 1.13.1
+
+install: true
+
+before_script:
+  - curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh| sh -s -- -b $(go env GOPATH)/bin v1.16.0
+
+script:
+  - test -z "$(gofmt -s -l `find . -name "*.go" | egrep -v vendor` | tee /dev/stderr)"
+  - golangci-lint run -E gosec
+  - ./build/build.sh
+
+after_script:
+  - echo done
+
+# vim: set ts=2 sw=2 tw=0 et:
