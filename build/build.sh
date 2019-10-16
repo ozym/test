@@ -10,7 +10,7 @@ error_handler () {
 trap error_handler ERR
 
 go get github.com/GeoNet/delta/meta
-go get go build gopkg.in/yaml.v2
+go get gopkg.in/yaml.v2
 
 mkdir -p files/ntripcaster
 go build ./code/cmd/ntripcaster-config || exit 255
