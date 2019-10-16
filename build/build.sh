@@ -17,6 +17,11 @@ go build ./code/cmd/ntripcaster-config || exit 255
 
 ./ntripcaster-config -base testdata -input testdata -output files/ntripcaster/test.yaml
 
+git add files/ntripcaster/test.yaml
+git commit -m 'auto update [skip travis]'
+git remote -v 
+git push origin master
+
 exit $errcount
 
 # vim: tabstop=4 expandtab shiftwidth=4 softtabstop=4
