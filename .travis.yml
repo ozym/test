@@ -8,7 +8,9 @@ language: go
 go:
   - 1.13.1
 
-install: true
+install:
+  - go get github.com/GeoNet/delta/meta
+  - go get gopkg.in/yaml.v2
 
 before_script:
   - curl -sfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh| sh -s -- -b $(go env GOPATH)/bin v1.16.0
@@ -19,6 +21,6 @@ script:
   - ./build/build.sh
 
 after_script:
-  - echo done
+  - echo ls -lR files
 
 # vim: set ts=2 sw=2 tw=0 et:
