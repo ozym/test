@@ -10,7 +10,7 @@ error_handler () {
 trap error_handler ERR
 
 git checkout -b build
-git remote set-url self git@github.com:ozym/test.git
+git remote add self git@github.com:ozym/test.git
 openssl aes-256-cbc -k "$travis_key_password" -d -md sha256 -a -in travis_key.enc -out travis_key
 echo "Host github.com" > ~/.ssh/config
 echo "  IdentityFile  $(pwd)/travis_key" >> ~/.ssh/config
