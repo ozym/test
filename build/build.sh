@@ -13,7 +13,7 @@ go get github.com/GeoNet/delta/meta
 go get go build gopkg.in/yaml.v2
 
 mkdir -p files/ntripcaster
-go build ./code/ntripcaster-config || exit 255
+go build ./code/cmd/ntripcaster-config || exit 255
 
 ./ntripcaster-config -base testdata -input testdata -output files/ntripcaster/test.yaml
 
